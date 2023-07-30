@@ -1,28 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 *{
     padding:0;
     margin:0;
-    border:1px solid black;
+    /* border:1px solid black; */
+}
+header{
+    background-color: rgb(20,20,20);
+    height:200px;
+    /* border-radius:0,0,10px, 10px; */
+    width:100vw;
 }
 .logo{
-    background: url("./tech-tales-and-lattes-logo__1_-removebg-preview.png") no-repeat; 
+    background: url("./img/tech-tales-and-lattes-logo__1_-removebg-preview.png") no-repeat; 
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; 
     width:100vw;
-    height: 200px;
+    height: 250px;
     margin:0 auto;
     align-items: center;
-    background-color:rgb(20,20,20,.9);
+    /* background-color:rgb(20,20,20,.9); */
 }
+
 .scrollable{
+    /* white-space: wrap; */
     display: flex;
     height: 60vh;
     width:auto;
     flex-direction: row;
     justify-content: center;
+    border:1px solid black;
+    background-color: aliceblue;
 }
 .sections{
     width:400px;
     margin:auto;
     height: 20em;
+    align-items:baseline;
 }
+.first, .second,.third {
+    display: flex;
+    border: 1px solid black;
+    align-items: flex-end;
+}
+    @keyframes unroll {
+        0% {
+        width: 0;
+        }
+        50% {
+        width: 150px;
+        }
+        100% {
+        width: 300px;
+        }
+  }
+.second{
+    width: 100px;
+    height: auto;
+}
+.third{
+    width:100px;
+    height:auto;
+}
+.second:hover,.third:hover{
+    transform: scale(110%);
+    width:400px;
+    height: 20em;
+    transition:ease-in-out 1s;
+}
+.blog1{
+    display: flex;
+    position: relative;
+    align-self:end;
+    bottom:10px;
+  
+}
+footer{
+    font-family: Abel,arial,'Times New Roman', Times, serif;
+    text-align: right;
+    margin:10px;
+}
+#blog1 {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }

@@ -13,13 +13,27 @@
     </header>
     <main>
         <div class="scrollable">
-         <div class="sections">1</div>
-         <div class="sections">2</div>
-         <div class="sections">3</div>
+         <div class="sections first">
+            <img src="" alt="">
+            <p id="blog1"><b>Guia para ser un developer y evitar toparte con gatos naranja: </b> saber como tener una carrera exitosa en la tecnologia?, Cuales son los pasos mas efectivos para tener  un desarrollo Aqui te lo cuento!</p>
+         </div>
+         <div class="sections second">2</div>
+         <div class="sections third">3</div>
         </div>
     </main>
     <footer>
-        
+        <p>All rights reserved by coffee sundays and orange cats that walk down the street ©</p>
     </footer>
+    <script>
+        const firstSection = document.querySelector(".first");
+        const scrollingText = document.getElementById("blog1");
+    
+        firstSection.addEventListener("mouseover", function () {
+            scrollingText.style.opacity = "1";
+            this.style.animation = "unroll 1s ease forwards";
+        });
+    </script>
+
 </body>
+
 </html>
