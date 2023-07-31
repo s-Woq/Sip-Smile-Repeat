@@ -9,31 +9,37 @@
 </head>
 <body>
     <header>
-    <div class="logo"></div>
+        <div class="logo"></div>
     </header>
     <main>
         <div class="scrollable">
-         <div class="sections first">
-            <img src="" alt="">
-            <p id="blog1"><b>Guia para ser un developer y evitar toparte con gatos naranja: </b> saber como tener una carrera exitosa en la tecnologia?, Cuales son los pasos mas efectivos para tener  un desarrollo Aqui te lo cuento!</p>
-         </div>
-         <div class="sections second">2</div>
-         <div class="sections third">3</div>
+            <div class="sections first">
+                <img src="" alt="">
+                <p id="blog1"><b>Guia para ser un developer y evitar toparte con gatos naranja: en solo 5 meses!</b> </p>
+            </div>
+            <div class="sections second"><p id="blog2">Coming soon</p></div>
+            <div class="sections third"><p id="blog3">Coming soon</p></div>
         </div>
     </main>
     <footer>
-        <p>All rights reserved by coffee sundays and orange cats that walk down the street ©</p>
+        <p>All rights reserved by coffee and orange cats that walk down the street ©</p>
     </footer>
     <script>
         const firstSection = document.querySelector(".first");
         const scrollingText = document.getElementById("blog1");
-    
+
+        const secondSection = document.querySelector(".first");
+        const scrollingText2 = document.getElementById("blog2");
+
+        const thirdSection = document.querySelector(".first");
+        const scrollingText3 = document.getElementById("blog3");
+
         firstSection.addEventListener("mouseover", function () {
-            scrollingText.style.opacity = "1";
             this.style.animation = "unroll 1s ease forwards";
+            setTimeout(() => {
+                scrollingText.style.opacity = "1";
+            }, 1000); // Show the text after 1 second
         });
     </script>
-
 </body>
-
 </html>
