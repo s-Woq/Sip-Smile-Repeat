@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-*{
+*{  
+    text-decoration: none;
     border:1px solid #000;
 }
  body {
@@ -37,6 +38,8 @@ header {
     justify-content: space-around;
     border: 1px solid black;
     background-color: aliceblue;
+    align-items: center;
+    overflow: hidden;
 }
 
 .sections {
@@ -48,7 +51,12 @@ header {
     align-items: baseline;
     padding: 10px; /* Add padding to create space between content and border */
 }
-
+.image-container {
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+}
 .first {
     display: flex;
     border: 1px solid black;
@@ -57,7 +65,7 @@ header {
     padding: 10px;  
 }
 
-.first {
+.first ,.second ,.third {
     display: flex;
     /* flex-direction: column; */
     border: 1px solid black;
@@ -75,6 +83,9 @@ header {
     width: 400px;
     height: 20em;
     transition: ease-in-out 1s;
+}
+footer p a{
+    color:gray;
 }
 
 
