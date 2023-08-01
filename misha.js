@@ -252,4 +252,4 @@ const waitForImages = () => {
 	});
 };
 
-waitForImages();
+// waitForImages();
