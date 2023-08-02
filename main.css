@@ -80,6 +80,7 @@ header {
     width: 400px;
     height: 20em;
     transition: ease-in-out 1s;
+    /* opacity: .5; */
 }
 
 .first::before {
@@ -132,11 +133,64 @@ header {
     object-fit: cover;
     width: 100%;
     height: 100%;
+    border-radius: 10xp;
 }
 #blog-container, #text2container , #text3container{
     position: absolute;
-
-    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    /* border: 10px solid red; */
     display: flex;
     align-items: end;
 }
+
+#blog-container:hover , #text2container:hover , #text3container:hover{
+    transform: translateY(-100px);
+    transition: 2s ease-in-out;
+    font-weight: 700;
+    font-size: larger;
+    height: 100%;
+    bottom: -100px;
+    align-items:center ;
+
+}
+#blog1:hover ,#blog2:hover, #blog3:hover{
+    transform: rotate(1deg);
+    text-align: center;
+    transition: .5s ease-in-out;
+    color:antiquewhite;
+    align-items: center;
+    display: grid;
+    justify-items: center;
+
+
+}
+#blog1, #blog2, #blog3{
+    /* border:1px red solid; */
+    display: flex;
+    align-items: end;
+    color: black; 
+    height: 100%;
+    width: 90%; 
+    text-align: left;
+
+}
+.image-container{
+    /* border:1px solid red; */
+    /* opacity: .4; */
+    /* transform: translateY(100px); */
+}
+
+#first-div{
+    width: 500px;
+    height: 290px;
+    border:1px solid red;
+    /* opacity: 0.2; */
+    transition: ease-in-out 2s;
+    /* transform: translateY(300px); */
+    z-index: 1;
+}
+#first-div:hover{
+    transform: translateY(300px);
+}
+
