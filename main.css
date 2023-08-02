@@ -183,6 +183,7 @@ header {
     height: 100%;
     width: 100%; 
     text-align: center;
+    font-size: 35px;
 
 }
 
@@ -196,4 +197,18 @@ header {
 
 #first-div:hover {
     transform: translateY(350px); /* Apply transform on hover */
+}
+footer{
+    /* border:1px solid red; */
+    display: flex;
+    justify-content: end;
+    color:grey;
+    cursor: context-menu;
+}
+footer p a {
+    color:grey;
+}
+footer p a:hover {
+    color:gray;
+    cursor:context-menu;
 }
