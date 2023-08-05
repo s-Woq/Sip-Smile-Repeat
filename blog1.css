@@ -75,9 +75,9 @@ body {
 
 /* Style for the white box */
 .content-displayed {
-  /* background-color: rgba(255, 255, 255, 0.342); */
+  background-color: rgba(255, 255, 255, 0.342);
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   padding: 20px;
   position: fixed;
   /* top: 50%;
@@ -94,8 +94,8 @@ body {
 .content {
   position: relative;
   top:calc(50%  - 20px);
-  color: white;
-  background-color: grey;
+  color: transparent transparent;
+  background-color: transparent transparent;
   opacity: .2;
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -103,7 +103,7 @@ body {
   line-height: 1.6;
   display: flex;
   border-radius: 10px;
-  /* border:  1px solid red; */
+  border: 1px solid antiquewhite;
   height: 300px;
   width: 400px;
   position: auto;
@@ -112,13 +112,15 @@ body {
   transform: rotate(90deg) ;
 }
 .content:hover{
-  /* background-color: rgba(251, 203, 141,.6); */
+  height: 200px;
+  width: 500px;
+  background-color: rgba(204, 179, 146, 0.6);
   /* opacity: 0; */
   transition: 1s ease-in-out;
   transform: scale(105%) translateX(100px);
   opacity: 1;
-  color:antiquewhite;
-  /* border: 1px solid antiquewhite; */
+  color:rgb(224, 204, 184);
+  border: none;
 }
 .r-box{
   position:absolute;
@@ -129,4 +131,8 @@ body {
   height: 100vh;
   display: flex;
   
+}
+@media only screen and (max-width:600px){
+
+
 }

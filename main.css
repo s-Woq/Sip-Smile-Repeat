@@ -223,8 +223,12 @@ footer p a:hover {
 /* Small screens (up to 600px) */
 @media (max-width: 600px) {
     header {
+        display: flex;
         height: 150px;
+        align-items: center;
+        justify-content: center;
     }
+    
     
     .scrollable {
         height: auto;
