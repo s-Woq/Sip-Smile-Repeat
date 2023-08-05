@@ -1,0 +1,132 @@
+*{
+    text-decoration: none;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(20,20,10);
+  }
+  .typewriter-text a{
+    color:grey; 
+  }
+  .container {
+    margin:60px;
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* Centra los elementos horizontalmente */
+    justify-content: space-evenly; /* Espacia los elementos de manera uniforme en el eje vertical */
+    height: 80vh; /* Establece el contenedor para ocupar toda la altura de la ventana gráfica */
+  }
+  h2{
+    color:rgb(255, 157, 0);
+  }
+  .box {
+    background-color:rgba(52, 52, 52, 0.9);
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    opacity: 0.7; /* Opacidad inicial */
+    /* overflow: hidden; Oculta el contenido que exceda el tamaño del div */
+    min-width: 150px; /* Establece un ancho mínimo para evitar que los divs se encimen */
+    max-width: 400px;
+  }
+  
+  .box:hover {
+    transform: scale(1.1);
+    opacity: 1; /* Opacidad completa al hacer hover */
+    min-width: 200px; /* Ancho mínimo aumentado al hacer hover */
+    max-width: 600px;
+  }
+  
+  .typewriter-text {
+    opacity: 0; /* Inicialmente, el texto estará oculto */
+    transition: opacity 0.5s ease; /* Transición para un efecto de fading */
+    color:#f0f0f0;
+  }
+  
+  .box:hover .typewriter-text {
+    opacity: 1; /* Mostramos el texto con un efecto de fading al hacer hover */
+  }
+/* ... Your existing CSS ... */
+
+.content-displayed {
+  /* background-color: rgba(255, 255, 255, 0.9); */
+  position: fixed;
+  top: 0;
+  right: -100%; /* Initially off-screen */
+  bottom: 0;
+  width: 50%;
+  opacity: 0;
+  transition: right 0.5s ease, opacity 0.5s ease;
+  /* overflow: auto; */
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.content-displayed.active {
+  right: 0; /* Displayed on screen */
+  opacity: 1;
+  border-radius: 10px;
+}
+
+/* Style for the white box */
+.content-displayed {
+  /* background-color: rgba(255, 255, 255, 0.342); */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: fixed;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  /* z-index: 1000; */
+  max-width: 80%;
+  max-height: 100%;
+  /* overflow: auto; */
+  /* display: none; Hide by default */
+}
+
+/* Style for the content within the white box */
+.content {
+  position: relative;
+  top:calc(50%  - 20px);
+  color: white;
+  background-color: grey;
+  opacity: .2;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.6;
+  display: flex;
+  border-radius: 10px;
+  /* border:  1px solid red; */
+  height: 300px;
+  width: 400px;
+  position: auto;
+  align-items: center;
+  transition: background-color 0.5s ease, transform 0.5s ease; 
+  transform: rotate(90deg) ;
+}
+.content:hover{
+  /* background-color: rgba(251, 203, 141,.6); */
+  /* opacity: 0; */
+  transition: 1s ease-in-out;
+  transform: scale(105%) translateX(100px);
+  opacity: 1;
+  color:antiquewhite;
+  /* border: 1px solid antiquewhite; */
+}
+.r-box{
+  position:absolute;
+  right: 0px;
+  top:0px;
+  width: 100%;
+  /* border: 1px solid white; */
+  height: 100vh;
+  display: flex;
+  
+}
