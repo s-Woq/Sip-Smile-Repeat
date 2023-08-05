@@ -37,7 +37,6 @@ header {
     width: auto;
     flex-direction: row;
     justify-content: space-around;
-    /* border: 1px solid black; */
     background-color: aliceblue;
     align-items: center;
     overflow: hidden;
@@ -219,4 +218,69 @@ footer p a {
 footer p a:hover {
     color:gray;
     cursor:context-menu;
+}
+
+/* Small screens (up to 600px) */
+@media (max-width: 600px) {
+    header {
+        height: 150px;
+    }
+    
+    .scrollable {
+        height: auto;
+        flex-direction: column;
+    }
+    
+    .sections {
+        width: 90%;
+        margin: 10px auto;
+    }
+    
+    .first, .second, .third {
+        width: 90%;
+        height: auto;
+    }
+    
+    .image-container {
+        max-width: 100%;
+        height: 15em;
+    }
+    
+    #blog1, #blog2, #blog3 {
+        font-size: 28px;
+    }
+}
+
+/* Medium screens (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    header {
+        height: 175px;
+    }
+    
+    .sections {
+        width: 45%;
+    }
+    
+    .first, .second, .third {
+        width: 100%;
+    }
+    
+    .image-container {
+        height: 18em;
+    }
+    
+    #blog1, #blog2, #blog3 {
+        font-size: 32px;
+    }
+}
+
+/* Large screens (1025px and above) */
+@media (min-width: 1025px) {
+    .sections {
+        width: 30%;
+    }
+    
+    .image-container {
+        height: 20em;
+    }
 }
