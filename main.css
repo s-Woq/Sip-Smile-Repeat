@@ -8,7 +8,7 @@ body {
     font-family: Abel, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: rgba(46, 8, 8, 0.959);
+    background-color: rgba(20, 20, 20,9);
     /* border:10px solid red; */
     height: 100vh;
     /* border-radius: 10px; */
@@ -17,7 +17,7 @@ body {
 
 header {
     background-color: rgb(20, 20, 20);
-    height: 200px;
+    height: 150px;
     width: 100vw;
 } 
 
@@ -34,17 +34,24 @@ header {
     height: 250px;
     margin: 0 auto;
     align-items: center;
+    justify-content: center;
+    position: relative;
+    top:-50px;
 }
 
 .scrollable {
+    background-image: url("./img/pexels-george-chambers-15356579.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     height: 72vh;
-    width: auto;
+    width: 100vw;
     flex-direction: row;
     justify-content: space-around;
-    background-color: rgb(20, 20, 20);
+    /* background-color: rgb(20, 20, 20); */
     align-items: center;
     overflow: hidden;
+    /* border:1px solid white; */
 }
 
 .sections {
@@ -206,6 +213,8 @@ header {
     transform: translateY(0); 
     z-index: 2;
     border-radius: 10px;
+    /* align-items: center; */
+    /* border:solid 1px white; */
 }
 
 #first-div:hover {
