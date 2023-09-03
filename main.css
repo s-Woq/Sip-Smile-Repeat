@@ -4,14 +4,38 @@
     /* border:1px solid #000; */
 }
 
+@keyframes loader{
+    0%{
+    transform:scale(0);
+    opacity:0;
+    }
+    100%{
+        transform:scale(1);
+        opacity: 0;
+    }
+}
+.loader::after,loader::before{
+    animation: loader 2s linear infinite linear;
+    content: '';
+    border:2px solid #fff;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    border-radius: 50%;
+}
+.loader::after{
+    opacity: 0;
+    animation-delay:1s;
+}
+
 body {
     font-family: Abel, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: rgba(46, 8, 8, 0.959);
-    /* border:10px solid red; */
+    background-color: rgba(36, 30, 30, 0.959);
+    
     height: 100vh;
-    /* border-radius: 10px; */
+
 
 }
 

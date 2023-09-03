@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <span class="loader"></span>
    
         <header>
           <div class="logo"></div>
@@ -53,6 +54,12 @@
           <p>All rights reserved by coffee and <a href="misha-blog.html">orange cats</a> that walk down the street &#129497©</p>
       </footer>
     <script>
+        const loadingFrame = document.getElementById("loading-frame");
+
+window.addEventListener("load", function () {
+    loadingFrame.style.display = "none";
+});
+
         const firstSection = document.querySelector(".first");
         const scrollingText = document.getElementById("blog1");
 
