@@ -3,7 +3,7 @@ const contentDisplayed = document.querySelector(".content-displayed");
 const content = document.querySelector(".content");
 
 const boxContents = [
-    "Aprender algo nuevo puede ser complicado debido a la carga cognitiva que impone en nuestro cerebro. Un error común es intentar memorizar sin comprender, lo que resulta en un aprendizaje superficial que dificulta la retención y aplicación.b  ",
+    "<div class='blog'><img id='first-image' src='./img/forest2.jpg' alt='banner1'> </div> <div class='blog'> </div> <div class='blog'></div>",
     "This is the content for Box 2...",
     "This is the content for Box 3..."
 ];
