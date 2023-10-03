@@ -26,7 +26,7 @@ header {
 }
 
 .logo {
-    background: url("./img/tech-tales-and-lattes-logo__1_-removebg-preview.png") no-repeat;
+    background: url("../img/tech-tales-and-lattes-logo__1_-removebg-preview.png") no-repeat;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -40,7 +40,7 @@ header {
 }
 
 .scrollable {
-    background-image: url("./img/pexels-george-chambers-15356579.jpg");
+    background-image: url("../img/pexels-george-chambers-15356579.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
