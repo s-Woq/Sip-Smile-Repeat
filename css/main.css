@@ -4,14 +4,39 @@
     /* border:1px solid #000; */
 }
 
+@keyframes loader{
+    0%{
+    transform:scale(0);
+    opacity:0;
+    }
+    100%{
+        transform:scale(1);
+        opacity: 0;
+    }
+}
+.loader::after,loader::before{
+    animation: loader 2s linear infinite linear;
+    content: '';
+    border:2px solid #fff;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    border-radius: 50%;
+}
+.loader::after{
+    opacity: 0;
+    animation-delay:1s;
+}
+
 body {
     font-family: Abel, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: rgba(20, 20, 20,9);
+    background-color: rgba(20, 20, 20);
+    
     /* border:10px solid red; */
     height: 100vh;
-    /* border-radius: 10px; */
+
 
 }
 
@@ -216,7 +241,53 @@ header {
     /* align-items: center; */
     /* border:solid 1px white; */
 }
+.socials {
+    position: absolute;
+    bottom: 70px;
+    margin:0 40em; 
+    right: 100px;
+    height: 145px;
+    width: auto; /* Remove fixed width */
+    /* border: 1px solid black; */
+    z-index: 1111;
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-media {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .social {
+    margin-right: 10px; /* Add some spacing between social icons */
+  }
+  
+  .social a {
+    display: inline-block; /* Make the anchor tag a block element */
+    width: 100px; /* Adjust the width to match your icon size */
+    height: 100px; /* Adjust the height to match your icon size */
+    text-align: center;
+    line-height: 30px; /* Vertically center the icon */
+    /* border: 1px solid pink; */
+    border-radius: 50%; /* Make it round */
+    transition: transform 0.5s ease-in-out;
+  }
 
+  .social a:hover {
+    transform:translateY(10px) scale(1.2); /* Scale up on hover */
+    transition: transform 0.5s ease-in-out;
+  }
+ion-icon{
+    color:white;
+    font-size: 4em;
+    transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out; /* Add box-shadow to the transition */
+}
+ion-icon:hover{
+    color:whitesmoke;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
 #first-div:hover {
     transform: translateY(350px); /* Apply transform on hover */
 }

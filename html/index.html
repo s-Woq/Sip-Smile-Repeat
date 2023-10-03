@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
+    <span class="loader"></span>
    
      <header>
           <div class="logo"></div>
-          <!-- <div class="socials">
+          <div class="socials">
             <li class="social-media">
-                <ul class="social github"><a href="https://github.com/s-Woq" target="_blank"><img src="img/github.svg" alt="github"></a></ul>
-                <ul class="social twitter"><a href="https://twitter.com/missa_sW" target="_blank"><img src="img/twitter.svg" alt="twitter"></a></ul>
-                <ul class="social linkedin"><a href="https://www.linkedin.com/in/midward-castro-1b890624b/" target="_blank"><img src="img/linkedin.svg
-                    " alt="linkedin"></a></ul>
+                <ul class="social github"><a href="https://github.com/s-Woq" target="_blank"><ion-icon name="logo-github"></ion-icon></a></ul>
+                <ul class="social twitter"><a href="https://twitter.com/missa_sW" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></ul>
+                <ul class="social linkedin"><a href="https://www.linkedin.com/in/midward-castro-1b890624b/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></ul>
             </li>
-          </div> -->
+          </div>
           
       </header>
       <main>
@@ -26,7 +26,7 @@
               <a href="first-blog.html" target="_blank">
                   <div class="sections  first">
                       <div class="image-container">
-                          <img id="first-div" src="../img/coffee shop.png" alt="cover div">
+                          <img id="first-div" src="./img/cof_shop.png" alt="cover div">
                       </div>
                       <div id="blog-container">
                           <p id="blog1" ><b>Accomplishments&#x1F9EF;</b></p>
@@ -37,7 +37,7 @@
               <a href="#" target="_blank">
                   <div class="sections  second">
                       <div class="image-container">
-                          <img id="first-div" src="../img/car-pexel.jpg" alt="">
+                          <img id="first-div" src="img/mountainfixed.jpg" alt="">
                       </div>
                       <div id="text2container">
                           <p id="blog2">Blogs &#128218;</p>
@@ -63,6 +63,12 @@
           <p>All rights reserved by coffee and <a href="misha-blog.html">orange cats</a> that walk down the street &#129497©</p>
       </footer>
     <script>
+        const loadingFrame = document.getElementById("loading-frame");
+
+window.addEventListener("load", function () {
+    loadingFrame.style.display = "none";
+});
+
         const firstSection = document.querySelector(".first");
         const scrollingText = document.getElementById("blog1");
 
@@ -91,6 +97,10 @@
             }, 1000); // Show the text after 1 second
         });
 
+        
+
     </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

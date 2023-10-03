@@ -48,6 +48,12 @@ body {
     color:#f0f0f0;
   }
   
+  
+  .content-displayed.active {
+    /* ... (your existing CSS rules) ... */
+    transition: right 0.5s ease, opacity 0.5s ease, transform 0.5s ease; /* Add transition for smoother display */
+  }
+
   .box:hover .typewriter-text {
     opacity: 1; /* Mostramos el texto con un efecto de fading al hacer hover */
   }
@@ -65,7 +71,7 @@ body {
 
 } */
 
-.blog {
+.blog ,.blog2{
   width: 15em;
   height: 25em;
   background-color:rgb(20,20,20,.9);
@@ -73,16 +79,31 @@ body {
   border-radius: 10px;
   animation: scaleAnimation 2s ease-in-out  alternate;
   overflow: hidden;
+  opacity: .7;
 
   /* Can display it in animation like infinite as well */
 
 }
+.blog img {
+  /* transform: scale(10%) translateX(-950em) translateY(-1400em); */
+  position: relative;
+  width: 400px;
+  height: auto;
+  left:0;
+  transition: ease-in-out 1s;
+}
+.blog img:hover{
+  transform: scale(1.2) translateY(-10px) ;
+  transition: ease-in-out 1s;
+}
+
+
 
 @keyframes scaleAnimation {
   0% {
       width:14em;
       height:24em;
-      transform: scale(1.1);
+      transform: scale(1.2);
       border-radius: 20px;
   }
   100% {
@@ -156,29 +177,30 @@ body {
   line-height: 1.6;
   display: flex;
   border-radius: 10px;
-  border: 1px solid antiquewhite;
+  /* border: 1px solid antiquewhite; */
   height: 100vh;
   width: 100vh;
   position: relative;
   top:5%;
-  right:5%;
+  right:2%;
   align-items: center;
-  transition: background-color 0.5s ease, transform 0.5s ease; 
+  /* transition: background-color 1s ease, transform 1s ease;  */
   transform: rotate(90deg) ;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  transition: height 1s ease, width 1s ease, transform 1s ease, opacity 1s ease; /* Add transition for smoother display */
 
 }
 .content:hover{
   height: 90vh;
   width: 90%;
-  background-color: rgba(204, 179, 146, 0.6);
+  /* background-color: rgba(67, 67, 67, 0.743); */
   /* opacity: 0; */
   transition: 1s ease-in-out;
   transform: scale(105%) translateX(100px);
   opacity: 1;
-  color:rgb(224, 204, 184);
+  /* color:rgb(52, 52, 52); */
   border: none;
 }
 .r-box{
@@ -191,6 +213,7 @@ body {
   display: flex;
   
 }
+
 @media only screen and (max-width:600px){
 
 
