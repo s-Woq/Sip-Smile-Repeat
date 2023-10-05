@@ -34,9 +34,13 @@ body {
     min-width: 150px; /* Establece un ancho mínimo para evitar que los divs se encimen */
     max-width: 400px;
   }
+  .imag{
+    border:1px solid red;
+    z-index: 1000000;
+  }
   
   .box:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     opacity: 1; /* Opacidad completa al hacer hover */
     min-width: 200px; /* Ancho mínimo aumentado al hacer hover */
     max-width: 600px;
@@ -166,6 +170,8 @@ body {
 
 /* Style for the content within the white box */
 .content {
+  /* background-image: url("../img/coff.jpg"); */
+  /* background-size: contain; */
   position: relative;
   top:calc(50%  - 20px);
   color: transparent transparent;
@@ -185,7 +191,7 @@ body {
   right:2%;
   align-items: center;
   /* transition: background-color 1s ease, transform 1s ease;  */
-  transform: rotate(90deg) ;
+  transform: rotate(30deg) ;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;

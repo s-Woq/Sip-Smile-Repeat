@@ -255,9 +255,13 @@ header {
   }
   
   .social-media {
+    position: relative;
     list-style: none;
     display: flex;
     flex-direction: row;
+    /* border:10px solid black; */
+    top:5em;
+    left: 12em;
   }
   
   .social {
