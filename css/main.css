@@ -1,41 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 * {  
     text-decoration: none;
-    /* border:1px solid #000; */
+    /* border:1px solid white; */
+}
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
 }
 
-@keyframes loader{
-    0%{
-    transform:scale(0);
-    opacity:0;
-    }
-    100%{
-        transform:scale(1);
-        opacity: 0;
-    }
-}
-.loader::after,loader::before{
-    animation: loader 2s linear infinite linear;
-    content: '';
-    border:2px solid #fff;
-    width: 48px;
-    height: 48px;
-    position: absolute;
-    border-radius: 50%;
-}
-.loader::after{
-    opacity: 0;
-    animation-delay:1s;
-}
 
 body {
     font-family: Abel, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: rgba(20, 20, 20);
+    /* background-color: rgba(20, 20, 20); */
     
     /* border:10px solid red; */
     height: 100vh;
+    overflow: hidden;
 
 
 }
@@ -44,6 +30,7 @@ header {
     background-color: rgb(20, 20, 20);
     height: 150px;
     width: 100vw;
+    /* border:1px solid white; */
 } 
 
 .scrollable a {
@@ -243,9 +230,9 @@ header {
 }
 .socials {
     position: absolute;
-    bottom: 70px;
-    margin:0 40em; 
-    right: 100px;
+    bottom: 60px;
+    margin:0 auto; 
+    left:35em;
     height: 145px;
     width: auto; /* Remove fixed width */
     /* border: 1px solid black; */
@@ -285,7 +272,7 @@ header {
   }
 ion-icon{
     color:white;
-    font-size: 4em;
+    font-size: 2.5em;
     transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out; /* Add box-shadow to the transition */
 }
 ion-icon:hover{
@@ -301,7 +288,10 @@ footer{
     justify-content: end;
     color:grey;
     cursor: context-menu;
-    max-height: 100px;
+    min-height: 130px;
+    /* max-height:180px; */
+    background-color: black;
+    width:100vw;
 }
 footer p a {
     color:grey;
