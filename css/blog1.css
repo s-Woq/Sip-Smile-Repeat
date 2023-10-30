@@ -1,226 +1,155 @@
-*{
-    text-decoration: none;
-}
+/* styles.css */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: rgb(20,20,10);
-  }
-  .typewriter-text a{
-    color:grey; 
-  }
-  .container {
-    margin:60px;
-    display: flex;
-    flex-direction: column;
-    align-items: left; /* Centra los elementos horizontalmente */
-    justify-content: space-evenly; /* Espacia los elementos de manera uniforme en el eje vertical */
-    height: 80vh; /* Establece el contenedor para ocupar toda la altura de la ventana gráfica */
-    width:30vh;
-  }
-  h2{
-    color:rgb(255, 157, 0);
-  }
-  .box {
-    background-color:rgba(52, 52, 52, 0.9);
-    padding: 10px;
-    margin: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 10px;
-    opacity: 0.7; /* Opacidad inicial */
-    /* overflow: hidden; Oculta el contenido que exceda el tamaño del div */
-    min-width: 150px; /* Establece un ancho mínimo para evitar que los divs se encimen */
-    max-width: 400px;
-  }
-  .imag{
-    border:1px solid red;
-    z-index: 1000000;
-  }
-  
-  .box:hover {
-    transform: scale(1.2);
-    opacity: 1; /* Opacidad completa al hacer hover */
-    min-width: 200px; /* Ancho mínimo aumentado al hacer hover */
-    max-width: 600px;
-  }
-  
-  .typewriter-text {
-    opacity: 0; /* Inicialmente, el texto estará oculto */
-    transition: opacity 0.5s ease; /* Transición para un efecto de fading */
-    color:#f0f0f0;
-  }
-  
-  
-  .content-displayed.active {
-    /* ... (your existing CSS rules) ... */
-    transition: right 0.5s ease, opacity 0.5s ease, transform 0.5s ease; /* Add transition for smoother display */
-  }
-
-  .box:hover .typewriter-text {
-    opacity: 1; /* Mostramos el texto con un efecto de fading al hacer hover */
-  }
-/* ... Your existing CSS ... */
-
-/* .blog::before{
-  content:"";
-  position:absolute;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width:0px;
-  animation:expand_show;
-  z-index:-1;
-
-} */
-
-.blog ,.blog2{
-  width: 15em;
-  height: 25em;
-  background-color:rgb(20,20,20,.9);
-  margin: 0.5em;
-  border-radius: 10px;
-  animation: scaleAnimation 2s ease-in-out  alternate;
-  overflow: hidden;
-  opacity: .7;
-
-  /* Can display it in animation like infinite as well */
-
-}
-.blog img {
-  /* transform: scale(10%) translateX(-950em) translateY(-1400em); */
-  position: relative;
-  width: 400px;
-  height: auto;
-  left:0;
-  transition: ease-in-out 1s;
-}
-.blog img:hover{
-  transform: scale(1.2) translateY(-10px) ;
-  transition: ease-in-out 1s;
-}
-
-
-
-@keyframes scaleAnimation {
-  0% {
-      width:14em;
-      height:24em;
-      transform: scale(1.2);
-      border-radius: 20px;
-  }
-  100% {
-      height: 25em;
-      width:15em;
-      border-radius: 10px;
-      transform: scale(1);
-  }
-}
-#first-image{
-  position:relative;
-  bottom: 100px;
-  left:-100px;
-  margin:0 auto;
-  object-fit: cover;
-  object-position: bottom;
-  background-size: contain;
-  background-repeat: no-repeat;
-  
-}
-.content-displayed {
-  /* background-color: rgba(255, 255, 255, 0.9); */
-  position: fixed;
-  top: 0;
-  right: -100%; /* Initially off-screen */
-  bottom: 0;
-  width: 80%;
-  opacity: 0;
-  transition: right 0.5s ease, opacity 0.5s ease;
-  /* overflow: auto; */
-  padding: 20px;
-  box-sizing: border-box;
-  z-index: 1000;
-}
-
-.content-displayed.active {
-  right: 0; /* Displayed on screen */
-  opacity: 1;
-  border-radius: 10px;
-  /* width:100vh; */
-}
-
-/* Style for the white box */
-.content-displayed {
-  background-color: rgba(255, 255, 255, 0.342);
-  border-radius: 10px;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
-  padding: 20px;
-  position: fixed;
-
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
-  /* z-index: 1000; */
-  max-width: 100%;
-  max-height: 100%;
-  /* overflow: auto; */
-  /* display: none; Hide by default */
-}
-
-/* Style for the content within the white box */
-.content {
-  /* background-image: url("../img/coff.jpg"); */
-  /* background-size: contain; */
-  position: relative;
-  top:calc(50%  - 20px);
-  color: transparent transparent;
-  background-color: transparent transparent;
-  opacity: .2;
   font-family: Arial, sans-serif;
-  font-size: 16px;
-  text-align: center;
-  line-height: 1.6;
-  display: flex;
-  border-radius: 10px;
-  /* border: 1px solid antiquewhite; */
-  height: 100vh;
-  width: 100vh;
+  background-color: #232323e6; /* Background color for the body */
+  margin: 0;
+}
+
+.dropdown {
   position: relative;
-  top:5%;
-  right:2%;
-  align-items: center;
-  /* transition: background-color 1s ease, transform 1s ease;  */
-  transform: rotate(30deg) ;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  transition: height 1s ease, width 1s ease, transform 1s ease, opacity 1s ease; /* Add transition for smoother display */
-
+  display: inline-block;
 }
-.content:hover{
-  height: 90vh;
-  width: 90%;
-  /* background-color: rgba(67, 67, 67, 0.743); */
-  /* opacity: 0; */
-  transition: 1s ease-in-out;
-  transform: scale(105%) translateX(100px);
-  opacity: 1;
-  /* color:rgb(52, 52, 52); */
+
+.dropbtn {
+  position: relative;
+  margin: 10px;
+  width: 10em;
+  /* border:1px solid rgba(255, 255, 255, 0.307); */
+  background-color: transparent ;
+  /* color: transparent transparent; */
+  padding: 10px;
   border: none;
+  cursor: pointer;
+  background-size: 200% 200%; /* Increase background size for the diagonal effect */
+  background-position: top left; /* Start the gradient from the top left corner */
+  transition: background 0.5s; /* Add a transition for the background */
+  border-radius:4px;
 }
-.r-box{
-  position:absolute;
-  right: 0px;
-  top:0px;
-  width: 100%;
-  /* border: 1px solid white; */
-  height: 100vh;
+
+.dropbtn:hover {
+  background-position: bottom right; /* End the gradient at the bottom right corner */
+  background: linear-gradient(to bottom right, #8a5732, transparent); /* Diagonal gradient background */
+}
+
+.dropbtn:hover + .dropdown-content,
+.dropdown-content:hover {
+  max-height: 500px; /* Set a maximum height when hovering */
+  /* left:5em; */
+}
+.dropdown-content {
+  display: block; /* Start with display: block */
+  position: absolute; 
+  background: linear-gradient(to bottom right, #8B4513,transparent); /* Diagonal gradient background for the dropdown */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, background 0.5s; /* Add transitions for max-height and background */
+  border-radius: 10px;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: #333;
+}
+
+.dropdown-content a:hover {
+  background-color: #8B4513;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+ion-icon{
+  font-size: 2em;
+}
+header{
+  width:100vw;
+  /* overflow: hidden; */
+  /* background: linear-gradient(to right, transparent,black); */
+  /* border:1px solid black; */
+}
+
+.wrapper{
+  /* overflow: hidden; */
+}
+
+#projects {
   display: flex;
-  
+  flex-direction: row;
+  width:90em;
+  height: 40em;
+  justify-content: space-between;
+  /* border:1px solid red; */
+  margin: 0 auto;
+  align-items: center;
 }
 
-@media only screen and (max-width:600px){
+.project {
+  border-radius: 10px;
+  width: 12em; /* Set the desired width for your div */
+  height: 19em; /* Set the desired height for your div */
+  overflow: hidden; /* Hide any part of the image that exceeds the div dimensions */
+  position: relative; /* Create a positioning context for the absolute positioning of .img-container */
+}
 
+.img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background to improve text readability */
+  color: #fff; /* Set text color to white */
+}
 
+.img-container img {
+  max-width: 100%; /* Set the maximum width to 100% of the div width */
+  max-height: 100%; /* Set the maximum height to 100% of the div height */
+  display: block; /* Remove any extra space below the image */
+  margin: 0 auto; /* Center the image horizontally within the div */
+}
+
+.img-container h1, .img-container h2 {
+  text-align: center; /* Center the text horizontally */
+  margin: 0;
+  padding: 10px; /* Add padding for spacing around the text */
+}
+.project h1, .project h2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center; /* Center the text horizontally */
+  background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background to improve text readability */
+  color: #fff; /* Set text color to white */
+  margin: 0;
+  padding: 10px; /* Add padding for spacing around the text */
+}
+.logo img{
+  position: relative;
+  width: 50%;
+  height: 100%;
+  margin:0 auto;
+  /* border: 1px solid red; */
+  left:40em;
+}
+header{
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+  align-items: center;
+}
+main{
+  background-color:#222;
+  z-index: 1;
 }
